@@ -1,7 +1,7 @@
 {
-  "name": "OpenMask - TON wallet",
-  "short_name": "OpenMask",
-  "description": "A TON Wallet in your Browser",
+  "name": "IONMask - ION wallet",
+  "short_name": "IONMask",
+  "description": "ION Wallet in your Browser",
   "version": "0.21.1",
   "manifest_version": 3,
   "action": {
@@ -25,16 +25,28 @@
   },
   "content_scripts": [
     {
-      "matches": ["file://*/*", "http://*/*", "https://*/*"],
-      "js": ["content.js"],
+      "matches": [
+        "file://*/*",
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_start",
       "all_frames": true
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["provider.js"],
-      "matches": ["file://*/*", "http://*/*", "https://*/*"]
+      "resources": [
+        "provider.js"
+      ],
+      "matches": [
+        "file://*/*",
+        "http://*/*",
+        "https://*/*"
+      ]
     }
   ]
 }

@@ -24,18 +24,18 @@ export const defaultNetworkConfigs: NetworkConfig[] = [
     isDefault: true,
     name: "mainnet", // aka chainId
     id: TonConnectNETWORK.MAINNET,
-    rpcUrl: "https://toncenter.com/api/v2/jsonRPC",
+    rpcUrl: "https://23.29.127.151:83/jsonRPC",
     apiKey: process.env.REACT_APP_TONCENTER_API_KEY,
-    scanUrl: "https://tonscan.org/address/",
+    scanUrl: "https://23.29.127.151:3003/address/",
     rootDnsAddress: mainnetRootDnsAddress,
   },
   {
     isDefault: true,
     name: "testnet", // aka chainId
     id: TonConnectNETWORK.TESTNET,
-    rpcUrl: "https://testnet.toncenter.com/api/v2/jsonRPC",
+    rpcUrl: "https://23.29.127.151:83/jsonRPC",
     apiKey: process.env.REACT_APP_TONCENTER_TESTNET_API_KEY,
-    scanUrl: "https://testnet.tonscan.org/address/",
+    scanUrl: "https://23.29.127.151:3003/address/",
     rootDnsAddress: testnetRootDnsAddress,
   },
 ];
