@@ -24,7 +24,7 @@ export const defaultNetworkConfigs: NetworkConfig[] = [
     isDefault: true,
     name: "mainnet", // aka chainId
     id: TonConnectNETWORK.MAINNET,
-    rpcUrl: "https://23.29.127.151:83/jsonRPC",
+    rpcUrl: "http://94.100.16.239/http/v2/jsonRPC",
     apiKey: process.env.REACT_APP_TONCENTER_API_KEY,
     scanUrl: "https://23.29.127.151:3003/address/",
     rootDnsAddress: mainnetRootDnsAddress,
