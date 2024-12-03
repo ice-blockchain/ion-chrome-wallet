@@ -60,7 +60,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "node task/build",
+    "build": "node task/build; cp -r build ion-mask && zip -r ion-mask.zip ion-mask && rm -rf ion-mask;",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
