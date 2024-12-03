@@ -10,32 +10,20 @@ export interface NetworkConfig {
 }
 
 export enum TonConnectNETWORK {
-  MAINNET = "-239",
   TESTNET = "-3",
 }
 // Need to get this address from network Config #4
 const testnetRootDnsAddress =
   "Ef_v5x0Thgr6pq6ur2NvkWhIf4DxAxsL-Nk5rknT6n99oPKX";
-const mainnetRootDnsAddress =
-  "Ef-OJd0IF0yc0xkhgaAirq12WawqnUoSuE9RYO3S7McG6lDh";
 
 export const defaultNetworkConfigs: NetworkConfig[] = [
   {
     isDefault: true,
-    name: "mainnet", // aka chainId
-    id: TonConnectNETWORK.MAINNET,
-    rpcUrl: "http://94.100.16.239/http/v2/jsonRPC",
-    apiKey: process.env.REACT_APP_TONCENTER_API_KEY,
-    scanUrl: "https://23.29.127.151:3003/address/",
-    rootDnsAddress: mainnetRootDnsAddress,
-  },
-  {
-    isDefault: true,
     name: "testnet", // aka chainId
     id: TonConnectNETWORK.TESTNET,
-    rpcUrl: "https://23.29.127.151:83/jsonRPC",
+    rpcUrl: "https://api.testnet.ice.io/http/v2/jsonRPC",
     apiKey: process.env.REACT_APP_TONCENTER_TESTNET_API_KEY,
-    scanUrl: "https://23.29.127.151:3003/address/",
+    scanUrl: "https://explorer.testnet.ice.io/address/",
     rootDnsAddress: testnetRootDnsAddress,
   },
 ];
