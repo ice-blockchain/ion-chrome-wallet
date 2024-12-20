@@ -24,7 +24,7 @@ export class TonProvider extends EventEmitter {
     }
   > = {};
 
-  constructor(ton = window.ton) {
+  constructor(ton = window.ion) {
     super();
     if (ton && ton.isOpenMask) {
       this.nextJsonRpcId = ton.nextJsonRpcId;
@@ -39,7 +39,7 @@ export class TonProvider extends EventEmitter {
     }
     if (ton && ton.isTonWallet) {
       ton._destroy && ton._destroy();
-      window.ton = this;
+      window.ion = this;
     }
     window.addEventListener("message", this.onMessage);
   }

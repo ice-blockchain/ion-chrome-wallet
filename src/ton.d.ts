@@ -20,11 +20,11 @@ interface ITonProvider {
 
 declare global {
   interface Window {
-    ton: ITonProvider;
-    openmask: {
+    ion: ITonProvider;
+    ionmask: {
       provider: ITonProvider;
-      tonconnect: TonConnectBridge;
+      ionconnect: TonConnectBridge;
     };
-    tonProtocolVersion: number;
+    ionProtocolVersion: number;
   }
 }

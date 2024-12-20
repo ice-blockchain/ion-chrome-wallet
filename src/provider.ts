@@ -1,18 +1,18 @@
 import { TonProvider } from "./libs/provider";
 import { TonConnect } from "./libs/provider/tonconnect";
 
-const havePrevInstance = !!window.ton;
+const havePrevInstance = !!window.ion;
 
-const provider = new TonProvider(window?.ton);
-const tonconnect = new TonConnect(provider, window?.openmask?.tonconnect);
+const provider = new TonProvider(window?.ion);
+const ionconnect = new TonConnect(provider, window?.ionmask?.ionconnect);
 
-window.tonProtocolVersion = 2;
-window.ton = provider;
-window.openmask = {
+window.ionProtocolVersion = 2;
+window.ion = provider;
+window.ionmask = {
   provider,
-  tonconnect,
+  ionconnect,
 };
 
 if (!havePrevInstance) {
-  window.dispatchEvent(new Event("tonready"));
+  window.dispatchEvent(new Event("ionready"));
 }

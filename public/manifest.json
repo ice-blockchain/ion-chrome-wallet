@@ -1,8 +1,8 @@
 {
-  "name": "IONMask - ION wallet",
-  "short_name": "IONMask",
+  "name": "IONWallet",
+  "short_name": "IONWallet",
   "description": "ION Wallet in your Browser",
-  "version": "0.21.1",
+  "version": "1.0.0",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html",

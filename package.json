@@ -1,8 +1,8 @@
 {
-  "name": "@openmask/extension",
-  "version": "0.21.1",
+  "name": "@ionwallet/extension",
+  "version": "1.0.0",
   "private": false,
-  "repository": "https://github.com/OpenProduct/openmask-extension",
+  "repository": "https://github.com/ice-blockchain/ion-chrome-wallet",
   "dependencies": {
     "@amplitude/analytics-browser": "^1.9.4",
     "@ledgerhq/hw-transport-webhid": "^6.27.12",
@@ -60,7 +60,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "node task/build; cp -r build ion-mask && zip -r ion-mask.zip ion-mask && rm -rf ion-mask;",
+    "build": "node task/build; cp -r build ion-wallet && zip -r ion-wallet.zip ion-wallet && rm -rf ion-wallet;",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
