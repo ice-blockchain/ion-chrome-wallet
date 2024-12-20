@@ -74,7 +74,7 @@ const Wallet: FC<{
           {wallet.ledger && <BadgeLabel>Ledger</BadgeLabel>}
         </Row>
         <Row>{wallet.address}</Row>
-        <Balance>{data ? formatTonValue(data) : "-"} TON</Balance>
+        <Balance>{data ? formatTonValue(data) : "-"} ICE</Balance>
       </Column>
     </Label>
   );

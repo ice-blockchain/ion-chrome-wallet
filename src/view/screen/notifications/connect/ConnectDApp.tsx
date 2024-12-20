@@ -70,7 +70,7 @@ export const Wallet: FC<{
           <b>{wallet.name}</b>
         </Row>
         <Row>{wallet.address}</Row>
-        <Balance>{data ? formatTonValue(data) : "-"} TON</Balance>
+        <Balance>{data ? formatTonValue(data) : "-"} ICE</Balance>
       </Column>
     </Label>
   );

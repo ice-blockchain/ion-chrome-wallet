@@ -31,7 +31,7 @@ export const Fees: FC<{ estimation?: EstimateFeeValues }> = ({
     <>
       <TextLine>Network fee estimation:</TextLine>
       <TextLine>
-        ~<b>{fiatFees.format(parseFloat(totalTon))} TON</b>
+        ~<b>{fiatFees.format(parseFloat(totalTon))} ICE</b>
       </TextLine>
     </>
   );

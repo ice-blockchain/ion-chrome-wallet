@@ -15,7 +15,7 @@ import {
 
 interface DeDustAssetMetadata {
   name: string; // "Toncoin",
-  symbol: string; // "TON",
+  symbol: string; // "ICE",
   image: string; // "https://assets.dedust.io/ton/images/ton.png",
   decimals: number; //9
 }
@@ -105,7 +105,7 @@ const getDeDustStock = async () => {
         dex: "DeDust.io",
         url: jetton.address,
         symbol: jetton.address,
-        price: rate, // in TON
+        price: rate, // in ICE
       };
 
       return acc;
@@ -231,7 +231,7 @@ const geStonFiStock = async (): Promise<AppStocks> => {
       dex: "ston.fi",
       url: jettonAddress,
       symbol: jettonAddress,
-      price: rate, // in TON
+      price: rate, // in ICE
     };
 
     return acc;

@@ -51,7 +51,7 @@ export const Balance: FC<BalanceProps> = ({ balance, price }) => {
       <NetworkLogo>
         <TonIcon />
       </NetworkLogo>
-      <Amount>{formatted} TON</Amount>
+      <Amount>{formatted} ICE</Amount>
       <Fiat balance={balance} price={price} />
       <BallanceButtonRow>
         <BallanceButton label="Buy" onClick={() => navigate(AppRoute.buy)}>

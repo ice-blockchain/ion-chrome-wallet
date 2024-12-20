@@ -80,11 +80,11 @@ export const SendNftConfirm: FC<ConfirmProps> = ({ nft, state, onSend }) => {
         <Fees estimation={data} />
         <TextLine>Transaction fee estimation:</TextLine>
         <TextLine>
-          Max: ~<b>{fiatFees.format(transaction)} TON*</b>
+          Max: ~<b>{fiatFees.format(transaction)} ICE*</b>
         </TextLine>
         <Quote>
-          * The wallet sends an amount of TON to cover internal transaction and
-          network storage costs. The rest of the TON that will not be used will
+          * The wallet sends an amount of ICE to cover internal transaction and
+          network storage costs. The rest of the ICE that will not be used will
           be returned to the wallet.
         </Quote>
 

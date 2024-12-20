@@ -125,7 +125,7 @@ export const useDomainNftMutation = () => {
 
   return useMutation<NftItemState | undefined, Error, DomainNftProps>(
     async ({ collection, address }) => {
-      if (collection.name === "TON DNS Domains") {
+      if (collection.name === "ICE DNS Domains") {
         /**
          * https://github.com/ton-blockchain/dns-contract/blob/8864d3f6e1743910dc6ec6708540806283df09c4/func/nft-item.fc#L280
          */

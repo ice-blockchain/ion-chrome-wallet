@@ -147,7 +147,7 @@ export const AssetsList: FC<{
   return (
     <>
       <AssetJettonView
-        name="TON"
+        name="ICE"
         logo={<TonIcon />}
         balance={balance}
         price={price}

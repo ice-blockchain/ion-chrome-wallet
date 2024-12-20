@@ -25,8 +25,8 @@ export interface SendJettonState {
   amount: string;
 
   /**
-   * TON Amount with would be transfer to handle internal transaction expenses
-   * By default community agreed to 0.1 TON
+   * ICE Amount with would be transfer to handle internal transaction expenses
+   * By default community agreed to 0.1 ICE
    */
   transactionAmount: string;
 

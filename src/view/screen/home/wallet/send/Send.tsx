@@ -56,7 +56,7 @@ const InputView: FC<InputProps> = ({ state, balance, onChange, onSend }) => {
 
   return (
     <Body>
-      <H1>Send TON</H1>
+      <H1>Send ICE</H1>
 
       <InputField
         label="Enter wallet address"
@@ -81,7 +81,7 @@ const InputView: FC<InputProps> = ({ state, balance, onChange, onSend }) => {
         >
           Max
         </MaxButton>
-        {formatted} TON
+        {formatted} ICE
       </MaxRow>
 
       <InputField

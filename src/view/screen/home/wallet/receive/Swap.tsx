@@ -56,7 +56,7 @@ const SwapIndex = () => {
         </Row>
         <Text>
           The first and folk DEX in The Open Network. The service allows to swap
-          TON to oUSDT, oUSDC and other altcoins.
+          ICE to oUSDT, oUSDC and other altcoins.
         </Text>
         <ButtonNegative
           onClick={() =>
@@ -76,7 +76,7 @@ const SwapIndex = () => {
           />
           <SubTitle>ston.fi</SubTitle>
         </Row>
-        <Text>An AMM DEX for the TON blockchain</Text>
+        <Text>An AMM DEX for the ICE blockchain</Text>
         <ButtonNegative
           onClick={() =>
             ExtensionPlatform.openTab({
@@ -126,7 +126,7 @@ const SwapIndex = () => {
           disabled={network != "mainnet"}
           onClick={() =>
             ExtensionPlatform.openTab({
-              url: `https://changehero.io/?ref=${process.env.REACT_APP_CHANGEHERO}&cur_from=TON `,
+              url: `https://changehero.io/?ref=${process.env.REACT_APP_CHANGEHERO}&cur_from=ICE `,
             })
           }
         >

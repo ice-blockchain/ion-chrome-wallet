@@ -89,7 +89,7 @@ export const ConfirmView: FC<ConfirmProps> = ({ state, price, onSend }) => {
         <AddressTransfer left={wallet.name} right={state.address} />
         <TextLine>SENDING:</TextLine>
         <TextLine>
-          <b>{state.amount} TON</b> <Fiat>{inFiat}</Fiat>
+          <b>{state.amount} ICE</b> <Fiat>{inFiat}</Fiat>
         </TextLine>
 
         <Fees estimation={data} />

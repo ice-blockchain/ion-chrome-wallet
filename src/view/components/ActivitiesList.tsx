@@ -121,7 +121,7 @@ const TransactionOut: FC<{
       <Text>
         <Line>
           <b>Send</b>
-          <span>-{formatTonValue(out.value)} TON</span>
+          <span>-{formatTonValue(out.value)} ICE</span>
         </Line>
         <Line>
           <span>{toShortAddress(address)}</span>
@@ -146,7 +146,7 @@ const TransactionIn: FC<{
       <Text>
         <Line>
           <b>Receive</b>
-          <span>+{formatTonValue(item.in_msg.value)} TON</span>
+          <span>+{formatTonValue(item.in_msg.value)} ICE</span>
         </Line>
         <Line>
           <span>{toShortAddress(address)}</span>

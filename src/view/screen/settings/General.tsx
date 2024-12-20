@@ -31,7 +31,7 @@ const ProxyItems = (PublicTonProxy as (ProxyHost | undefined)[]).concat([
 ]);
 
 const TONProxyInfoLink =
-  "https://telegra.ph/TON-Sites-TON-WWW-and-TON-Proxy-09-29-2";
+  "https://telegra.ph/ICE-Sites-ICE-WWW-and-ICE-Proxy-09-29-2";
 
 const ProxySelect = () => {
   const { data: proxy, isFetching } = useProxyConfiguration();
@@ -46,25 +46,25 @@ const ProxySelect = () => {
 
   return (
     <>
-      <SelectLabel>TON Proxy</SelectLabel>
+      <SelectLabel>ICE Proxy</SelectLabel>
       <DropDownList
         isLeft
         options={ProxyItems}
         renderOption={(value) =>
-          value ? `TON ${value.host}:${value.port}` : "Disabled"
+          value ? `ICE ${value.host}:${value.port}` : "Disabled"
         }
         onSelect={(value) => updateProxy(value)}
         disabled={disableProxy}
       >
         <SelectPayload disabled={disableProxy}>
           {proxy?.enabled
-            ? `TON ${proxy.domains["ton"].host}:${proxy.domains["ton"].port}`
+            ? `ICE ${proxy.domains["ton"].host}:${proxy.domains["ton"].port}`
             : "Disabled"}
           <ArrowDownIcon />
         </SelectPayload>
       </DropDownList>
       <Quote>
-        TON Proxy configuration to enabled TON WWW and TON Sites in your browser{" "}
+        ICE Proxy configuration to enabled ICE WWW and ICE Sites in your browser{" "}
         <InlineLink
           onClick={() => ExtensionPlatform.openTab({ url: TONProxyInfoLink })}
         >
@@ -72,7 +72,7 @@ const ProxySelect = () => {
         </InlineLink>
         <br />
         <br />
-        TON search engine:{" "}
+        ICE search engine:{" "}
         <InlineLink
           onClick={() =>
             ExtensionPlatform.openTab({ url: "http://searching.ton" })
