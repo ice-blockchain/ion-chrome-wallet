@@ -9,9 +9,9 @@
     "default_title": "Open the Wallet"
   },
   "icons": {
-    "16": "tonmask-logo16.png",
-    "48": "tonmask-logo48.png",
-    "128": "tonmask-logo128.png"
+    "16": "ion-logo16.png",
+    "48": "ion-logo48.png",
+    "128": "ion-logo128.png"
   },
   "permissions": [
     "proxy",

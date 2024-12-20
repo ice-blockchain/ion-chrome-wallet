@@ -62,7 +62,7 @@ const AboutSettings = () => {
         <H1>About</H1>
         <Text>
           <img
-            src="tonmask-logo.svg"
+            src="ion-logo.svg"
             width="68"
             height="68"
             alt="OpenMask Logo"
