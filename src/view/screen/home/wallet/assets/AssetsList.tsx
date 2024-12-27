@@ -145,7 +145,7 @@ export const AssetsList: FC<{
         <>
             <AssetJettonView
                 name="ICE"
-                logo={<TonIcon/>}
+                logo={<img src="ion-logo.svg" alt="ION" width={40} height={40}/>}
                 balance={balance}
                 price={price}
             />

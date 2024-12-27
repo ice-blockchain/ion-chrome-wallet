@@ -129,7 +129,7 @@ export const ConnectRequest: FC<
     <Body>
       <Center>
         <DAppBadge logo={logo} origin={origin} />
-        <H1>Ton Connect With OpenMask</H1>
+        <H1>Ton Connect With ION Wallet</H1>
         <Text>Select the account(s) to use on this site</Text>
       </Center>
       <Scroll>

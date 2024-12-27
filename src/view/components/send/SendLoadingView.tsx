@@ -30,10 +30,10 @@ export const SendLoadingView: FC<Props> = React.memo(
     return (
       <Body>
         <Gap />
-        <LoadingLogo />
-        <Center>
-          <H1>Await confirmation</H1>
-          <Text>~15 sec</Text>
+          <img src="ion-logo.svg" alt="ION" width={117} height={117}/>
+          <Center>
+              <H1>Await confirmation</H1>
+              <Text>~15 sec</Text>
         </Center>
         <Gap />
       </Body>

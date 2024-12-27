@@ -118,7 +118,7 @@ export const ConnectDApp: FC<
     <Body>
       <Center>
         <DAppBadge logo={logo} origin={origin} />
-        <H1>Connect With OpenMask</H1>
+        <H1>Connect With ION Wallet</H1>
         <Text>Select the account(s) to use on this site</Text>
       </Center>
       <Scroll>
@@ -257,7 +257,7 @@ export const ConfirmPermission: FC<ConfirmProps> = ({
     <Body>
       <Center>
         <DAppBadge logo={logo} origin={origin} />
-        <H1>Connect With OpenMask</H1>
+        <H1>Connect With ION Wallet</H1>
         <Text>Address: {addresses.map(toShortAddress).join(", ")}</Text>
         <Text>Allow this site to:</Text>
       </Center>

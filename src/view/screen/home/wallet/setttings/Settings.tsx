@@ -187,7 +187,7 @@ const SettingsDelete = () => {
       <Text>Deleting your wallet will clear all local stored data.</Text>
       <Text>The wallet could be re-enter by Secret Recovery Phrase.</Text>
       <Text>
-        OpenMask team cannot recover your wallet Secret Recovery Phrase.
+        ION Wallet team cannot recover your wallet Secret Recovery Phrase.
       </Text>
       <Gap />
       <ButtonRow>

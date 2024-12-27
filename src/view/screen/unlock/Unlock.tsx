@@ -57,10 +57,10 @@ const UnlockByWebAuthn: FC<{ justOpen: boolean }> = ({ justOpen }) => {
   return (
     <Body onSubmit={unlock}>
       <ButtonColumn>
-        <LoadingLogo />
-        <Center>
-          <H1>Welcome Back!</H1>
-        </Center>
+          <img src="ion-logo.svg" alt="ION" width={117} height={117}/>
+          <Center>
+              <H1>Welcome Back!</H1>
+          </Center>
         <Block />
         <ButtonPositive type="submit" disabled={isLoading}>
           Verify your identity <FingerprintIcon />
@@ -83,10 +83,10 @@ const UnlockByPassword = () => {
   return (
     <Body onSubmit={unlock}>
       <ButtonColumn>
-        <LoadingLogo />
-        <Center>
-          <H1>Welcome Back!</H1>
-        </Center>
+          <img src="ion-logo.svg" alt="ION" width={117} height={117}/>
+          <Center>
+              <H1>Welcome Back!</H1>
+          </Center>
         <div>
           <InputField
             label="Password"

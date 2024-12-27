@@ -3,7 +3,6 @@ import styled from "styled-components";
 import ExtensionPlatform from "../../../libs/service/extension";
 import {ButtonColumn, ButtonNegative, ButtonPositive, Container, H1,} from "../../components/Components";
 import {InputField} from "../../components/InputField";
-import {LoadingLogo} from "../../components/Logo";
 import {AppRoute} from "../../routes";
 import {ConnectRoutes} from "../import/ConnectWallet";
 import {useCreatePasswordMutation} from "./api";
@@ -59,7 +58,7 @@ export const CreatePassword = () => {
 
     return (
         <Body>
-            <LoadingLogo/>
+            <img src="ion-logo.svg" alt="ION" width={117} height={117}/>
             <H1>Create Password</H1>
             <ButtonColumn>
                 <div>

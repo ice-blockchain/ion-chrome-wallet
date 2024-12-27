@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 import styled from "styled-components";
 import {BallanceButton, BallanceButtonRow,} from "../../../components/BalanceButton";
 import {Container} from "../../../components/Components";
-import {BuyIcon, ReceiveIcon, SendIcon, SwapIcon, TonIcon,} from "../../../components/Icons";
+import {BuyIcon, ReceiveIcon, SendIcon, SwapIcon,} from "../../../components/Icons";
 import {AppRoute} from "../../../routes";
 import {formatTonValue} from "../../../utils";
 import {Fiat} from "./Fiat";
@@ -42,14 +42,16 @@ export const Balance: FC<BalanceProps> = ({balance, price}) => {
     return (
         <Block>
             <NetworkLogo>
-                <TonIcon/>
+                <img src="ion-logo.svg" alt="ION" width={40} height={40}/>
             </NetworkLogo>
             <Amount>{formatted} ICE</Amount>
             <Fiat balance={balance} price={price}/>
             <BallanceButtonRow>
-                <BallanceButton label="Buy" onClick={() => navigate(AppRoute.buy)}>
-                    <BuyIcon/>
-                </BallanceButton>
+                {dontRender && (
+                    <BallanceButton label="Buy" onClick={() => navigate(AppRoute.buy)}>
+                        <BuyIcon/>
+                    </BallanceButton>
+                )}
                 <BallanceButton
                     label="Receive"
                     onClick={() => navigate(AppRoute.receive)}

@@ -17,8 +17,8 @@ const AppHeader = styled.header`
 export const Loading = () => {
   return (
     <AppHeader>
-      <LoadingLogo />
-      <Text>Loading</Text>
+        <img src="ion-logo.svg" alt="ION" width={117} height={117}/>
+        <Text>Loading</Text>
     </AppHeader>
   );
 };
@@ -31,9 +31,9 @@ export const NotificationView: FC<
 > = ({ children, button, action }) => {
   return (
     <AppHeader>
-      <LoadingLogo />
-      {children}
-      <ButtonPositive onClick={action}>{button}</ButtonPositive>
+        <img src="ion-logo.svg" alt="ION" width={117} height={117}/>
+        {children}
+        <ButtonPositive onClick={action}>{button}</ButtonPositive>
     </AppHeader>
   );
 };

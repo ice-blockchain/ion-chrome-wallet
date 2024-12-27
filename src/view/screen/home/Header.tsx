@@ -125,7 +125,7 @@ export const Header: FC<{ lock: boolean }> = ({lock}) => {
                     src="ion-logo.svg"
                     width="38"
                     height="38"
-                    alt="OpenMask Logo"
+                    alt="ION Wallet Logo"
                 />
                 <Badge>{network}</Badge>
             </Head>
@@ -134,7 +134,7 @@ export const Header: FC<{ lock: boolean }> = ({lock}) => {
 
     return (
         <Head>
-            <img src="ion-logo.svg" width="38" height="38" alt="OpenMask Logo"/>
+            <img src="ion-logo.svg" width="38" height="38" alt="ION Wallet Logo"/>
             <DropDownList
                 options={networks}
                 renderOption={(c) => c.name}

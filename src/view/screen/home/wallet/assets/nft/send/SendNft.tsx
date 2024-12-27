@@ -60,10 +60,10 @@ const SuccessView: FC<SuccessProps> = ({
   return (
     <Body>
       <Gap />
-      <LoadingLogo />
-      <Center>
-        <H1>Confirm</H1>
-        <Text>Transaction finished</Text>
+        <img src="ion-logo.svg" alt="ION" width={117} height={117}/>
+        <Center>
+            <H1>Confirm</H1>
+            <Text>Transaction finished</Text>
       </Center>
       <ButtonColumn>
         <ButtonNegative

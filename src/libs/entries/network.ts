@@ -19,7 +19,7 @@ const testnetRootDnsAddress =
 export const defaultNetworkConfigs: NetworkConfig[] = [
   {
     isDefault: true,
-    name: "testnet", // aka chainId
+    name: "Testnet", // aka chainId
     id: TonConnectNETWORK.TESTNET,
     rpcUrl: "https://api.testnet.ice.io/http/v2/jsonRPC",
     apiKey: process.env.REACT_APP_TONCENTER_TESTNET_API_KEY,

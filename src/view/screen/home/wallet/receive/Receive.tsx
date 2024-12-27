@@ -125,9 +125,9 @@ const ReceiveIndex = () => {
       <Source>
         <Row>
           <NetworkLogo>
-            <TonIcon />
+              <img src="ion-logo.svg" alt="ION" width={40} height={40}/>
           </NetworkLogo>
-          <SubTitle>Directly deposit ICE</SubTitle>
+            <SubTitle>Directly deposit ICE</SubTitle>
         </Row>
         <Text>
           If you already have some ICE, the quickest way to get ICE in your new
@@ -178,7 +178,7 @@ export const ReceiveCoin: FC<ReceiveProps> = ({ symbol = "ICE" }) => {
         </Block>
       )}
       <TextRow>
-        Share this address to receive {symbol} in The Open Network
+        Share this address to receive {symbol} in Ice Open Network
       </TextRow>
       <AddressRow onClick={() => handleCopy(address)}>{address}</AddressRow>
       <ButtonNegative onClick={() => handleCopy(address)}>

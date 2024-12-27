@@ -81,7 +81,7 @@ export const Create = () => {
         phrase can take your crypto forever.
       </ErrorMessage>
       <MnemonicBlock>{show ? mnemonic : ""}</MnemonicBlock>
-      <Text>OpenMask cannot recover your Secret Recovery Phrase.</Text>
+      <Text>ION Wallet cannot recover your Secret Recovery Phrase.</Text>
       <ButtonRow>
         <ButtonNegative
           disabled={isLoading}
