@@ -1,12 +1,12 @@
 {
-  "name": "IONWallet",
-  "short_name": "IONWallet",
+  "name": "ION Wallet",
+  "short_name": "ION Wallet",
   "description": "ION Wallet in your Browser",
   "version": "1.0.0",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html",
-    "default_title": "IONWallet"
+    "default_title": "ION Wallet"
   },
   "icons": {
     "16": "ion-logo16.png",
