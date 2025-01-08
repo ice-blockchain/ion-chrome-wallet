@@ -37,7 +37,7 @@ export const useBalance = (address: string) => {
   );
 };
 
-const tonId = "the-open-network";
+const tonId = "ice";
 const currency = "usd";
 
 export const useCoinPrice = (enabled: boolean) => {
