@@ -19,7 +19,7 @@ enum ImportRoutes {
     mnemonic = "/mnemonic",
 }
 
-const MnemonicBlock = styled.div`
+const MnemonicBlock = styled.textarea`
     background-color: light-dark(rgba(239, 239, 239, 0.3), rgba(59, 59, 59, 0.3));
     color: light-dark(rgb(84, 84, 84), rgb(170, 170, 170));
     border-color: rgba(118, 118, 118, 0.3);
@@ -52,8 +52,7 @@ const ImportMnemonic = () => {
             <Text>To connect wallet, please enter your mnemonic here</Text>
             <Text>24 words separated by a space: thought borrow spend aisle....</Text>
             <MnemonicBlock
-                contentEditable
-                onBlur={(t) => !isLoading && setValue(t.currentTarget.innerHTML)}
+                onInput={(t) => !isLoading && setValue((t.target as any).value)}
             >
                 {value}
             </MnemonicBlock>
