@@ -139,7 +139,7 @@ export const AssetsList: FC<{
 
     const assets = useMemo(() => getWalletAssets(wallet), [wallet]);
 
-    const dontRender = false;
+    const dontRender = true;
 
     return (
         <>
