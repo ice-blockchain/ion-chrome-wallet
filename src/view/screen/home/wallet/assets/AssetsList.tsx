@@ -11,7 +11,7 @@ import ExtensionPlatform from "../../../../../libs/service/extension";
 import {seeIfJettonAsset} from "../../../../../libs/state/assetService";
 import {AssetItemView, AssetJettonView} from "../../../../components/Asset";
 import {Center, Gap, InlineButtonLink, Text,} from "../../../../components/Components";
-import {LinkIcon, TonIcon} from "../../../../components/Icons";
+import {LinkIcon} from "../../../../components/Icons";
 import {WalletStateContext} from "../../../../context";
 import {AppRoute} from "../../../../routes";
 import {useJettonWalletBalance} from "./api";
@@ -139,7 +139,7 @@ export const AssetsList: FC<{
 
     const assets = useMemo(() => getWalletAssets(wallet), [wallet]);
 
-    const dontRender = true;
+    const dontRender = false;
 
     return (
         <>
@@ -156,33 +156,33 @@ export const AssetsList: FC<{
                     <NftRowView asset={asset}/>
                 )
             )}
-            {dontRender && (
-                <>
-                    <Gap/>
-                    <Center>
-                        <Line>
-                            Don't see your tokens?{" "}
-                            <InlineButtonLink
-                                onClick={() => navigate(AppRoute.assets + AssetRoutes.jettons)}
-                            >
-                                Import Token
-                            </InlineButtonLink>
-                        </Line>
-                        <Text>
-                            Need help?{" "}
-                            <InlineButtonLink
-                                onClick={() => {
-                                    ExtensionPlatform.openTab({
-                                        url: `${packageJson.repository}/issues`,
-                                    });
-                                }}
-                            >
-                                Contact us! <LinkIcon/>
-                            </InlineButtonLink>
-                        </Text>
-                    </Center>
-                </>
-            )}
+            <Gap/>
+            <Center>
+                <Line>
+                    Don't see your tokens?{" "}
+                    <InlineButtonLink
+                        onClick={() => navigate(AppRoute.assets + AssetRoutes.nfts)}
+                    >
+                        Import Token
+                    </InlineButtonLink>
+                </Line>
+                <Gap/>
+                <br />
+                {dontRender && (
+                    <Text>
+                        Need help?{" "}
+                        <InlineButtonLink
+                            onClick={() => {
+                                ExtensionPlatform.openTab({
+                                    url: `${packageJson.repository}/issues`,
+                                });
+                            }}
+                        >
+                            Contact us! <LinkIcon/>
+                        </InlineButtonLink>
+                    </Text>
+                )}
+            </Center>
         </>
     );
 };
