@@ -1,10 +1,10 @@
 {
   "name": "@ionwallet/extension",
   "version": "1.0.0",
-  "private": false,
   "repository": "https://github.com/ice-blockchain/ion-chrome-wallet",
   "dependencies": {
     "@amplitude/analytics-browser": "^1.9.4",
+    "@ion-gateway/protocol": "https://github.com/ice-blockchain/ion-gateway.git",
     "@ledgerhq/hw-transport-webhid": "^6.27.12",
     "@ledgerhq/hw-transport-webusb": "^6.27.12",
     "@noble/ed25519": "^1.7.1",
@@ -15,7 +15,6 @@
     "@ton/core": "^0.53.0",
     "@ton/crypto": "^3.2.0",
     "@ton/ton": "^13.9.0",
-    "@tonconnect/protocol": "^2.2.5",
     "@vespaiach/axios-fetch-adapter": "^0.3.1",
     "bignumber.js": "^9.1.1",
     "bn.js": "4.11.6",
@@ -81,5 +80,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "packageManager": "yarn@4.7.0"
 }
