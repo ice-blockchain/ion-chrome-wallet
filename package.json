@@ -59,7 +59,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "node task/build; cp -r build ion-wallet && zip -r ion-wallet.zip ion-wallet && rm -rf ion-wallet;",
+    "build:submodules": "cd node_modules/@ion-gateway/protocol; npm install; yarn build;",
+    "build": "npm run build:submodules; node task/build; cp -r build ion-wallet && zip -r ion-wallet.zip ion-wallet && rm -rf ion-wallet;",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
