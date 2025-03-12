@@ -4,7 +4,7 @@
   "repository": "https://github.com/ice-blockchain/ion-chrome-wallet",
   "dependencies": {
     "@amplitude/analytics-browser": "^1.9.4",
-    "@ion-gateway/protocol": "https://github.com/ice-blockchain/ion-gateway.git",
+    "@ion-gateway/protocol": "file:./submodules/ion-gateway/packages/protocol",
     "@ledgerhq/hw-transport-webhid": "^6.27.12",
     "@ledgerhq/hw-transport-webusb": "^6.27.12",
     "@noble/ed25519": "^1.7.1",

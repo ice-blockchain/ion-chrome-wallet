@@ -1,4 +1,4 @@
-import { DeviceInfo } from "@tonconnect/protocol";
+import { DeviceInfo } from "@ion-gateway/protocol";
 import { OpenMaskError } from "../entries/message";
 import {
   TonConnectItemReply,
