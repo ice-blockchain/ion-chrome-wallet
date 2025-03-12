@@ -30,5 +30,3 @@ commit.sh
 
 *.zip
 .yarn
-
-./submodules
