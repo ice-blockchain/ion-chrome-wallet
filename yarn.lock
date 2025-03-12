@@ -2020,11 +2020,11 @@ __metadata:
 
 "@ion-gateway/protocol@file:./submodules/ion-gateway/packages/protocol::locator=%40ionwallet%2Fextension%40workspace%3A.":
   version: 2.2.7
-  resolution: "@ion-gateway/protocol@file:./submodules/ion-gateway/packages/protocol#./submodules/ion-gateway/packages/protocol::hash=65869a&locator=%40ionwallet%2Fextension%40workspace%3A."
+  resolution: "@ion-gateway/protocol@file:./submodules/ion-gateway/packages/protocol#./submodules/ion-gateway/packages/protocol::hash=51823e&locator=%40ionwallet%2Fextension%40workspace%3A."
   dependencies:
     tweetnacl: "npm:^1.0.3"
     tweetnacl-util: "npm:^0.15.1"
-  checksum: 10c0/c0483cf72741c408139014408da4dff2efafcdee1d006e9fcb46649e9371feae4b0f794493b12e3a818bcc1e8983ae4c42a6e83f241fbc2bc88291e80168a382
+  checksum: 10c0/4fc060458212b13715c4f8a7974f2108fb9c6ad343d098ea02fdb7ee7910bf23b9c87d7ad29a3125f9ebf43190e7cc062054e7542a215be0b90b5de05a9eb843
   languageName: node
   linkType: hard
 
