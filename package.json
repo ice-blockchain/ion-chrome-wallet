@@ -4,7 +4,7 @@
   "repository": "https://github.com/ice-blockchain/ion-chrome-wallet",
   "dependencies": {
     "@amplitude/analytics-browser": "^1.9.4",
-    "@ion-gateway/protocol": "file:./submodules/ion-gateway/packages/protocol",
+    "@ion-gateway/protocol": "^2.2.7",
     "@ledgerhq/hw-transport-webhid": "^6.27.12",
     "@ledgerhq/hw-transport-webusb": "^6.27.12",
     "@noble/ed25519": "^1.7.1",
@@ -59,8 +59,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "init:submodules": "git submodule update --init --recursive",
+    "update:submodules": "git submodule update --remote --merge",
     "build:submodules": "cd node_modules/@ion-gateway/protocol; npm install; yarn build;",
-    "build": "npm run build:submodules; node task/build; cp -r build ion-wallet && zip -r ion-wallet.zip ion-wallet && rm -rf ion-wallet;",
+    "build": "node task/build; cp -r build ion-wallet && zip -r ion-wallet.zip ion-wallet && rm -rf ion-wallet;",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -82,5 +84,8 @@
       "last 1 safari version"
     ]
   },
-  "packageManager": "yarn@4.7.0"
+  "packageManager": "yarn@4.7.0",
+  "resolutions": {
+    "@ion-gateway/protocol": "portal:/home/user/.config/yarn/link/@ion-gateway/protocol"
+  }
 }

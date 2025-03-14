@@ -1,4 +1,0 @@
-[submodule "submodules/ion-gateway"]
-	path = submodules/ion-gateway
-	url = https://github.com/ice-blockchain/ion-gateway.git
-    branch = ion-fork
