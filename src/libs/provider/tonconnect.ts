@@ -1,4 +1,4 @@
-import { DeviceInfo } from "@tonconnect/protocol";
+import { DeviceInfo } from "@ion-gateway/protocol";
 import { OpenMaskError } from "../entries/message";
 import {
   TonConnectItemReply,
@@ -42,7 +42,7 @@ function getPlatform(): DeviceInfo["platform"] {
 export const getDeviceInfo = (): DeviceInfo => {
   return {
     platform: getPlatform()!,
-    appName: "OpenMask",
+    appName: "ION Wallet",
     appVersion: packageJson.version,
     maxProtocolVersion: 2,
     features: [
@@ -125,9 +125,11 @@ interface WalletEvent {
 
 export interface WalletInfo {
   name: string;
+  app_name: string;
   image: string;
   tondns?: string;
   about_url: string;
+  platforms: string[];
 }
 
 export interface TonConnectBridge {
@@ -161,10 +163,12 @@ export class TonConnect implements TonConnectBridge {
 
   deviceInfo: DeviceInfo = getDeviceInfo();
   walletInfo: WalletInfo = {
-    name: "OpenMask",
+    name: "ION Wallet",
+    app_name: "ION Wallet",
     image:
-      "https://raw.githubusercontent.com/OpenProduct/openmask-extension/main/public/openmask-logo-288.png",
-    about_url: "https://www.openmask.app/",
+      "https://raw.githubusercontent.com/ice-blockchain/ion-chrome-wallet/refs/heads/ion-mainnet/public/ion-logo128.png",
+    about_url: "https://ice.io/",
+    platforms: ["chrome"]
   };
   protocolVersion = 2;
   isWalletBrowser = false;
