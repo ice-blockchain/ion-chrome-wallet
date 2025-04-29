@@ -2,7 +2,7 @@
   "name": "ION Wallet",
   "short_name": "ION Wallet",
   "description": "ION Wallet in your Browser",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html",
