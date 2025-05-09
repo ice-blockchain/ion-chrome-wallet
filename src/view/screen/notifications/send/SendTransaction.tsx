@@ -92,7 +92,7 @@ export const SendTransaction: FC<
       <AddressTransfer left={wallet.name} right={data.to} />
       <TextLine>SENDING: ({origin})</TextLine>
       <TextLine>
-        <b>{state.amount} ICE</b>
+        <b>{state.amount} ION</b>
       </TextLine>
 
       <Fees estimation={estimation} />

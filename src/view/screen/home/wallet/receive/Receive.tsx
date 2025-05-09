@@ -115,7 +115,7 @@ const ReceiveIndex = () => {
           disabled={network != "mainnet"}
           onClick={() =>
             ExtensionPlatform.openTab({
-              url: `https://changehero.io/?ref=${process.env.REACT_APP_CHANGEHERO}&cur_to=ICE `,
+              url: `https://changehero.io/?ref=${process.env.REACT_APP_CHANGEHERO}&cur_to=ION `,
             })
           }
         >
@@ -127,14 +127,14 @@ const ReceiveIndex = () => {
           <NetworkLogo>
               <img src="ion-logo.svg" alt="ION" width={40} height={40}/>
           </NetworkLogo>
-            <SubTitle>Directly deposit ICE</SubTitle>
+            <SubTitle>Directly deposit ION</SubTitle>
         </Row>
         <Text>
-          If you already have some ICE, the quickest way to get ICE in your new
+          If you already have some ION, the quickest way to get ION in your new
           wallet by direct deposit.
         </Text>
         <ButtonNegative onClick={() => navigate(`.${ReceiveRoutes.ton}`)}>
-          Receive ICE
+          Receive ION
         </ButtonNegative>
       </Source>
     </div>
@@ -165,14 +165,14 @@ const Title = styled(H1)`
   margin: 0;
 `;
 
-export const ReceiveCoin: FC<ReceiveProps> = ({ symbol = "ICE" }) => {
+export const ReceiveCoin: FC<ReceiveProps> = ({ symbol = "ION" }) => {
   const address = useContext(WalletAddressContext);
   const [copied, handleCopy] = useCopyToClipboard();
 
   return (
     <ButtonColumn>
       <Title>Receive {symbol}</Title>
-      {symbol === "ICE" && (
+      {symbol === "ION" && (
         <Block>
           <QRCode size={160} value={formatTransferUrl(address)} />
         </Block>

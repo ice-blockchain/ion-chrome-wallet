@@ -75,7 +75,7 @@ const Account: FC<{
             )}
             {wallet.name}
             {wallet.ledger && <BadgeLabel>Ledger</BadgeLabel>}
-            {data && <Balance>{formatTonValue(data)} ICE</Balance>}
+            {data && <Balance>{formatTonValue(data)} ION</Balance>}
         </AccountItem>
     );
 };

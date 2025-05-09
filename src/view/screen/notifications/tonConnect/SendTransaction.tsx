@@ -98,7 +98,7 @@ const TransactionItem: FC<{ message: PayloadMessage }> = ({ message }) => {
       <div>
         <TextLine>{name ?? "SENDING"}:</TextLine>
         <TextLine>
-          <b>{formatTonValue(String(message.amount))} ICE</b> to{" "}
+          <b>{formatTonValue(String(message.amount))} ION</b> to{" "}
           {toShortAddress(message.address || "", 6)}
         </TextLine>
       </div>

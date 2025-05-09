@@ -1,6 +1,6 @@
 import {Address} from "@ton/core";
 import BigNumber from "bignumber.js";
-import React, {FC, useContext, useMemo} from "react";
+import React, {FC, useContext, useEffect, useMemo} from "react";
 import {useNavigate} from "react-router-dom";
 import styled from "styled-components";
 import packageJson from "../../../../../../package.json";
@@ -16,6 +16,7 @@ import {WalletStateContext} from "../../../../context";
 import {AppRoute} from "../../../../routes";
 import {useJettonWalletBalance} from "./api";
 import {AssetRoutes} from "./route";
+import {useAddJettonMutation, useJettonFullData} from "./import/api";
 
 const Line = styled(Text)`
     padding: 10px 0 5px;
@@ -137,14 +138,67 @@ export const AssetsList: FC<{
     const navigate = useNavigate();
     const wallet = useContext(WalletStateContext);
 
-    const assets = useMemo(() => getWalletAssets(wallet), [wallet]);
+    const [importedJetton, setImportedJetton] = React.useState<JettonAsset | null>(null);
+
+    const assets = useMemo(() => {
+        const baseAssets = getWalletAssets(wallet);
+        if (importedJetton) {
+            const alreadyIncluded = baseAssets.some(a =>
+                seeIfJettonAsset(a) &&
+                (a as JettonAsset).minterAddress === importedJetton.minterAddress
+            );
+            return alreadyIncluded ? baseAssets : [...baseAssets, importedJetton];
+        }
+        return baseAssets;
+    }, [wallet, importedJetton]);
+
+    const {
+        mutateAsync: jettonFullDataAsync,
+        isLoading,
+        error,
+        reset
+    } = useJettonFullData();
+
+    const {
+        mutateAsync: addJettonAsync,
+        isLoading: isAddLoading,
+        reset: resetAdd,
+        error: errorAdd,
+    } = useAddJettonMutation();
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const minter = 'EQACbwI38RnvclU5Wv6H9zDr8Ao_tq9NWilXxBmoE8yroZlF';
+
+                const { data, wallet: jettonWallet, name: jettonState } = await jettonFullDataAsync(minter);
+
+                if (jettonState) {
+                    setImportedJetton({
+                        minterAddress: minter,
+                        walletAddress: jettonWallet?.address?.toString() ?? '',
+                        state: jettonState,
+                    });
+
+                    await addJettonAsync({
+                        minter,
+                        jettonState,
+                        jettonWallet,
+                    });
+                }
+            } catch (error) {
+                console.error("Failed to load Jetton data", error);
+            }
+        };
+        fetchData().then(() => {});
+    }, []);
 
     const dontRender = false;
 
     return (
         <>
             <AssetJettonView
-                name="ICE"
+                name="ION"
                 logo={<img src="ion-logo.svg" alt="ION" width={40} height={40}/>}
                 balance={balance}
                 price={price}

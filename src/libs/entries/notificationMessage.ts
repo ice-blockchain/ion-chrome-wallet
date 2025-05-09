@@ -70,7 +70,7 @@ export enum TonConnectNETWORK {
 
 export type TonAddressItemReply = {
   name: "ton_addr";
-  address: string; // ICE address raw (`0:<hex>`)
+  address: string; // ION address raw (`0:<hex>`)
   network: string | TonConnectNETWORK; // network global_id
   walletStateInit: string; // Base64 (not url safe) encoded stateinit cell for the wallet contract
 };

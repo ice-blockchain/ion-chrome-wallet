@@ -76,7 +76,7 @@ export const DeployContract: FC<
 
       <TextLine>Forward amount:</TextLine>
       <TextLine>
-        <b>{fromNano(data.amount)} ICE</b>
+        <b>{fromNano(data.amount)} ION</b>
       </TextLine>
 
       <Fees estimation={estimation} />

@@ -120,7 +120,7 @@ export const LedgerWallet = () => {
       {isConnecting && (
         <Step>
           <Text>
-            <Dots>Unlock Ledger and Open ICE App</Dots>
+            <Dots>Unlock Ledger and Open ION App</Dots>
           </Text>
         </Step>
       )}

@@ -103,11 +103,11 @@ export const SendJettonConfirm: FC<ConfirmProps> = ({
         <Fees estimation={data} />
         <TextLine>Transaction fee estimation:</TextLine>
         <TextLine>
-          Max: ~<b>{fiatFees.format(transaction)} ICE*</b>
+          Max: ~<b>{fiatFees.format(transaction)} ION*</b>
         </TextLine>
         <Quote>
-          * The wallet sends an amount of ICE to cover internal transaction
-          costs. The rest of the ICE that will not be used will be returned to
+          * The wallet sends an amount of ION to cover internal transaction
+          costs. The rest of the ION that will not be used will be returned to
           the wallet.
         </Quote>
 

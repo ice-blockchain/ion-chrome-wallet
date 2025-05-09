@@ -135,7 +135,7 @@ export const LedgerNotification = () => {
           <img src="/ledger.png" width="180" />
           {isConnecting && !result && (
             <Text>
-              <Dots>Unlock Ledger and Open ICE App</Dots>
+              <Dots>Unlock Ledger and Open ION App</Dots>
             </Text>
           )}
           {isSigning && !result && (

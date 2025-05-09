@@ -101,7 +101,7 @@ const NetworkConfiguration: FC<{ network: NetworkConfig }> = ({ network }) => {
       </div>
       <div>
         <InputField
-          label="Root ICE DNS Address"
+          label="Root ION DNS Address"
           disabled={disabled}
           value={rootDnsAddress}
           onChange={(e) => setRootDnsAddress(e.target.value)}

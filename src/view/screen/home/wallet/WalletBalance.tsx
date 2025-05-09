@@ -44,7 +44,7 @@ export const Balance: FC<BalanceProps> = ({balance, price}) => {
             <NetworkLogo>
                 <img src="ion-logo.svg" alt="ION" width={40} height={40}/>
             </NetworkLogo>
-            <Amount>{formatted} ICE</Amount>
+            <Amount>{formatted} ION</Amount>
             <Fiat balance={balance} price={price}/>
             <BallanceButtonRow>
                 {dontRender && (
