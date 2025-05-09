@@ -41,7 +41,7 @@ export const JettonRow: FC<Props> = React.memo(({ state, balance }) => {
 });
 
 const Image = styled.img`
-  border-radius: 50%;
+  // border-radius: 50%;
 `;
 
 export const JettonLogo: FC<{ image?: string; size?: number }> = React.memo(

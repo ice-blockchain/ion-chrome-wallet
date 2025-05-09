@@ -86,7 +86,7 @@ const Forward = styled.div`
 `;
 
 const Round = styled.img`
-  border-radius: 50%;
+  // border-radius: 50%;
 `;
 
 export const AssetJettonView: FC<AssetJettonProps> = ({
