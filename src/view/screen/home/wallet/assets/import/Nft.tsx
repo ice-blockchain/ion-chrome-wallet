@@ -166,7 +166,7 @@ export const ImportNft = () => {
 
         {nftData && !isLoading && (
           <Block>
-            <NftPayload state={nftState} />
+            <NftPayload state={nftState} itemAddress={address} />
           </Block>
         )}
 

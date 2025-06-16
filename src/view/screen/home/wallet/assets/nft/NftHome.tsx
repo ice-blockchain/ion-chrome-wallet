@@ -37,9 +37,10 @@ const NftActivities = () => {
 const NftHeader = () => {
   const navigate = useNavigate();
   const nft = useContext(NftItemStateContext);
+
   return (
     <BallanceBlock>
-      <NftPayload state={nft.state} />
+      <NftPayload state={nft.state} itemAddress={nft.address}/>
       <BallanceButtonRow>
         <BallanceButton
           label="Receive"
