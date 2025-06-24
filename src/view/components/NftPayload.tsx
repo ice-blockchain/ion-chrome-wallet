@@ -87,11 +87,13 @@ export const NftPayload: FC<{ state?: NftItemState | null, itemAddress?: string 
                         <b>{state.name}</b>
                     </Text>
                 )}
+                {/*
                 <ImageWrapper>
                     <NftImage src={ipfsProxy(state.image)} alt="NFT image"/>
                 </ImageWrapper>
+                */}
                 {state.description && <Text>{state.description}</Text>}
-                <div id="nft-item"></div>
+                <div id="nft-item" className="ion-nft-collection"></div>
             </Block>
         );
     }
